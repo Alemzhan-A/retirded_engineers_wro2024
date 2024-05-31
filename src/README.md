@@ -1,6 +1,14 @@
-Control software
+Код для ПО
 ====
 
-This directory must contain code for control software which is used by the vehicle to participate in the competition and which was developed by the participants.
+Наш робот состоит из двух главных компонентов: Raspberry Pi5, Ev3Brick.
+Они передают сигналы между собой через кабель Usb-miniusb. Ev3brick создает сервер для принятия данных, а raspberry pi отправляет их через ip/tcp сокеты.
+Данные команды позволяют задать ip адрес ev3 через raspberry pi. 
+sudo ip addr add 192.168.42.3/24 dev usb0
+sudo ip link set usb0 up
 
-All artifacts required to resolve dependencies and build the project must be included in this directory as well.
+На ev3brick был использован ev3dev. Для него был создан script ev3.py. Для raspberry pi 5 был создан script sender.py
+
+Задача sender.py: Отправлять сигналы о обнаружении нужных цветов.
+Задача ev3.py: Создание сервера, Задать айпи аддрес ev3 для raspberry pi, принимать значения с sender.py, корректировать движение робота.
+В коде предоставлено подробные комментарии.
