@@ -1,5 +1,5 @@
-Video
+Видео
 ====
 
-This directory must contain the video.md file with a URL to YouTube (should be either public or accessible by link) showing the vehicle driving autonomously.
-That part of the video where driving demonstration exists must be at least 30 seconds in length.
+Данная папка содержит видео запуска робота, а также оно доступно по ссылке:
+https://youtu.be/rf_jaqYtAWA?si=6koRkpcqfLRXmeL9
