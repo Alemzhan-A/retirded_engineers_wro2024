@@ -1,4 +1,4 @@
-Vehicle's photos
+Фотографии робота
 ====
 
-This directory must contain 6 photos of the vehicle (from every side, from top and bottom)
+Данная папка содержит 6 фотографии со всех сторон робота в высоком качестве
