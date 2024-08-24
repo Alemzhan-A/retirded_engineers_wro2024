@@ -1,26 +1,129 @@
-Engineering materials
-====
+# WRO Future Engineers - Team [Your Team Name]
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
-
-## Content
-
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
-* `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Robot Design](#robot-design)
+   - [Mobility Management](#mobility-management)
+   - [Power and Sensing Management](#power-and-sensing-management)
+   - [Obstacle Management](#obstacle-management)
+3. [Technical Specifications](#technical-specifications)
+4. [Software](#software)
+5. [Photos and Video](#photos-and-video)
+6. [Team Information](#team-information)
+7. [Development Process](#development-process)
+8. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+Welcome to our WRO Future Engineers project repository! This README provides comprehensive information about our robot design, features, and development process for the [Year] World Robot Olympiad Future Engineers category.
 
-## How to prepare the repo based on the template
+## Robot Design
 
-_Remove this section before the first commit to the repository_
+### Mobility Management
 
-1. Clone this repo by using the `git clone` functionality.
-2. Remove `.git` directory
-3. [Initialize a new public repository on GitHub](https://github.com/new) by following instructions from "create a new repository on the command line" section (appeared after pressing "Create repository" button).
+- **Drive System**: Rear-wheel drive powered by two LEGO medium motors
+- **Wheel Specifications**: 31mm radius wheels
+- **Gear Configuration**: 
+  - Two large gears (one per motor) connected by a small gear
+  - Additional large gear attached to the small gear, connecting to a differential
+- **Differential**: Installed on rear wheels
+- **Steering**: Horizontally mounted medium motor controlling the front axle
+
+**Design Rationale:**
+- LEGO components for ease of assembly and modification
+- Motors with similar manufacturing origins for synchronized operation
+- EV3 brick mounted sideways for convenient battery replacement
+
+**Dimensions**: 268mm (length) x 166mm (width) x 204mm (height)
+
+### Power and Sensing Management
+
+- **Power Source**: LEGO EV3 Intelligent Brick with rechargeable lithium-ion battery
+
+**Sensor Suite:**
+
+1. **LEGO Color Sensor**
+   - Purpose: Detection of orange and blue field markings
+   - Location: [Specify location]
+
+2. **Pixy2 Camera**
+   - Purpose: Identification of red and green objects
+   - Location: [Specify location]
+
+3. **LEGO Gyro Sensor**
+   - Purpose: Precise rotational control and orientation tracking
+   - Location: [Specify location]
+
+### Obstacle Management
+
+[Your obstacle management strategy details]
+
+## Technical Specifications
+
+- **Processor**: LEGO EV3 Intelligent Brick
+- **Motors**: 
+  - 2x LEGO Medium Motors (Rear drive)
+  - 1x LEGO Medium Motor (Front steering)
+- **Sensors**:
+  - 1x LEGO Color Sensor
+  - 1x Pixy2 Camera
+  - 1x LEGO Gyro Sensor
+- **Power Source**: Rechargeable lithium-ion battery (EV3 brick)
+- **Programming Language**: [Your language]
+
+## Software
+
+[Software architecture overview]
+
+```python
+# Example code snippet
+def detect_field_markings():
+    # Code for detecting field markings
+    pass
+
+def identify_objects():
+    # Code for identifying objects
+    pass
+```
+
+## Photos and Video
+
+### Team Photos
+Team photos are in the `t-photos` folder.
+
+<details>
+<summary>Click to view team photo</summary>
+
+![Team Photo](t-photos/team_photo.jpg)
+*Caption: [Your Team Name] at [Event/Location]*
+
+</details>
+
+### Vehicle Photos
+Robot photos are in the `v-photos` folder.
+
+<details>
+<summary>Click to view robot photos</summary>
+
+![Robot Front View](v-photos/robot_front.jpeg)
+*Front view of our robot*
+
+![Robot Side View](v-photos/robot_side.jpg)
+*Side view showcasing the drive system*
+
+![Robot Top View](v-photos/robot_top.jpg)
+*Top view highlighting sensor placement*
+
+</details>
+
+### Video Demonstration
+
+[![Robot Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+## Team Information
+
+- **Team Name**: Retired Engineers
+- **Country/Region**: Kazakhstan, Semey
+- **Members**:
+  - Akhmetzhanov Alemzhan
+  - Serikgali Daulet
