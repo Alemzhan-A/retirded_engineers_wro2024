@@ -1,0 +1,498 @@
+'OFDL Modules Test Program.
+folder "prjs""OFDL_ExPrj" 'Define the Project Name
+ 
+'import modules
+import "Mods\Color"
+import "Mods\Gyro"
+import "Mods\Ultrasonic"
+import "Mods\Pixy2"
+ 
+LCD.Clear()
+v = EV3.BatteryVoltage
+LCD.Write(10, 50, v)
+ 
+ColorSensorPort = 3
+GyroSensorPort = 1
+UltrasonicPort = 2
+ 
+Gyro.resetHard(1)
+initialAngle = 0
+ 
+Function turnToAngleright(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+  MotorBC.Start()
+  Program.Delay(500)
+    MotorD.StartPower(50)
+    MotorD.Start()
+    While currentAngle < 90 * numberofturns - 11
+      Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(-100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-23)
+    MotorBC.Start()
+EndFunction
+ 
+ 
+Function turnToAnglerightlast(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    Program.Delay(475)
+    MotorD.StartPower(50)
+    MotorD.Start()
+    While currentAngle < 90 * numberofturns - 5
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(-100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-23)
+    MotorBC.Start()
+EndFunction
+ 
+ 
+ 
+Function turnToAngleleft(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    Program.Delay(500)
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > -90 * numberofturns  + 11
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-23)
+    MotorBC.Start()
+EndFunction
+ 
+Function turnToAngleleftlast(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    Program.Delay(500 + numberofturns * 10)
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > -90 * numberofturns  + 5
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-23)
+    MotorBC.Start()
+EndFunction
+ 
+Function turnToAnglerightfirst(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    Program.Delay(550)
+    MotorD.StartPower(50)
+    MotorD.Start()
+    While currentAngle < 90 * numberofturns - 7
+        Gyro.getAngle(1, currentAngle)
+        LCD.Write(10, 80, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(-100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-21)
+    MotorBC.Start()
+EndFunction
+ 
+Function turnToAngleleftfirst(in number numberofturns)
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    Program.Delay(550)
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > -90 * numberofturns + 7
+        Gyro.getAngle(1, currentAngle)
+        LCD.Write(10, 80, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Program.Delay(1000)
+    MotorBC.StartPower(-80)
+    MotorBC.Start()
+    Program.Delay(200)
+    MotorBC.StartPower(-23)
+    MotorBC.Start()
+EndFunction
+ 
+Function color(out number d)
+  Sensor.SetMode(3, 4)
+  r = 0
+  g = 0
+  b = 0
+  Sensor3.Raw3(r, g, b)
+  If g > 200 Then
+    d = 6
+  Else
+    If r > b + 100 Then
+      d = 5
+    Else
+      d = 1
+    EndIf
+  EndIf
+EndFunction
+ 
+ 
+  x_red = 0
+y_red = 0
+w_red = 0
+h_red= 0
+x_gr = 0
+y_gr = 0
+w_gr = 0
+h_gr= 0
+ 
+While 1 = 1
+ 
+    Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+  Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+  If x_red > 0  Then
+    if(y_red<100) Then
+        while x_red <> 0
+      MotorD.StartPower(50)
+      MotorD.Start()
+      Program.Delay(10)
+      MotorBC.StartPower(-30)
+      MotorBC.Start()
+      Program.Delay(10)
+      Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+        EndWhile
+ 
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > 3
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+    MotorBC.OffAndBrake()
+    Else
+      MotorBC.StartPower(-25)
+      MotorBC.Start()
+      EndIf
+ 
+    EndIf
+    color(detectedColor)
+    If detectedColor = 5 Then
+    i = 1
+ 
+        turnToAnglerightfirst(i)
+        Speaker.Note(100, "B7", 100)
+        Sensor.SetMode(3, 4)
+        r = 255
+        g = 255
+        b = 255
+        While g > 200
+      Sensor3.Raw3(r, g, b)
+      Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+  Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+  If x_red > 0  Then
+    if(y_red<100) Then
+        while x_red <> 0
+      MotorD.StartPower(50)
+      MotorD.Start()
+      Program.Delay(10)
+      MotorBC.StartPower(-30)
+      MotorBC.Start()
+      Program.Delay(10)
+      Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+        EndWhile
+ 
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > 93
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+          MotorBC.OffAndBrake()
+          MotorBC.StartPower(-23)
+          MotorBC.Start()
+    Else
+      MotorBC.StartPower(-25)
+      MotorBC.Start()
+      EndIf
+    EndIf
+        EndWhile
+        For i = 2 To 11
+            turnToAngleright(i)
+            Speaker.Note(100, "B7", 100)
+            detectedColor = 1
+            Sensor.SetMode(3, 4)
+            r = 255
+            g = 255
+            b = 255
+            While g > 200
+                      Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+  Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+  If x_red > 0  Then
+    if(y_red<100) Then
+        while x_red <> 0
+      MotorD.StartPower(50)
+      MotorD.Start()
+      Program.Delay(10)
+      MotorBC.StartPower(-30)
+      MotorBC.Start()
+      Program.Delay(10)
+      Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+        EndWhile
+ 
+    Gyro.getAngle(1, initialAngle)
+    currentAngle = initialAngle
+    MotorBC.StartPower(-50)
+    MotorBC.Start()
+    MotorD.StartPower(-50)
+    MotorD.Start()
+    While currentAngle > 3+90*i
+        Gyro.getAngle(1, currentAngle)
+    EndWhile
+    Speaker.Note(100, "B3", 100)
+    MotorD.StartPower(100)
+    MotorD.Start()
+    Program.Delay(115)
+    MotorD.OffAndBrake()
+          MotorBC.OffAndBrake()
+          MotorBC.StartPower(-23)
+          MotorBC.Start()
+    Else
+      MotorBC.StartPower(-25)
+      MotorBC.Start()
+      EndIf
+    EndIf
+            EndWhile
+        EndFor
+        turnToAnglerightlast(12)
+        Program.Delay(2500)
+        MotorBC.Off()
+        Program.Delay(500000000)
+    ElseIf detectedColor = 1 Then
+    i = 1
+    turnToAngleleftfirst(i)
+    Speaker.Note(100, "B7", 100)
+    Sensor.SetMode(3, 4)
+    r = 255
+    g = 255
+    b = 255
+    While g > 200
+        Sensor3.Raw3(r, g, b)
+        Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+        Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+        If x_red > 0 Then
+            if(y_red<100) Then
+                while x_red <> 0
+                    MotorD.StartPower(50)
+                    MotorD.Start()
+                    Program.Delay(10)
+                    MotorBC.StartPower(-30)
+                    MotorBC.Start()
+                    Program.Delay(10)
+                    Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+                EndWhile
+
+                Gyro.getAngle(1, initialAngle)
+                currentAngle = initialAngle
+                MotorBC.StartPower(-50)
+                MotorBC.Start()
+                MotorD.StartPower(-50)
+                MotorD.Start()
+                While currentAngle > -93
+                    Gyro.getAngle(1, currentAngle)
+                EndWhile
+                Speaker.Note(100, "B3", 100)
+                MotorD.StartPower(100)
+                MotorD.Start()
+                Program.Delay(115)
+                MotorD.OffAndBrake()
+                MotorBC.OffAndBrake()
+                MotorBC.StartPower(-23)
+                MotorBC.Start()
+            Else
+                MotorBC.StartPower(-25)
+                MotorBC.Start()
+            EndIf
+        EndIf
+    EndWhile
+    For i = 2 To 11
+        turnToAngleleft(i)
+        Speaker.Note(100, "B7", 100)
+        Sensor.SetMode(3, 4)
+        r = 255
+        g = 255
+        b = 255
+        While g > 200
+            Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+            Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+            If x_red > 0 Then
+                if(y_red<100) Then
+                    while x_red <> 0
+                        MotorD.StartPower(50)
+                        MotorD.Start()
+                        Program.Delay(10)
+                        MotorBC.StartPower(-30)
+                        MotorBC.Start()
+                        Program.Delay(10)
+                        Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+                    EndWhile
+
+                    Gyro.getAngle(1, initialAngle)
+                    currentAngle = initialAngle
+                    MotorBC.StartPower(-50)
+                    MotorBC.Start()
+                    MotorD.StartPower(-50)
+                    MotorD.Start()
+                    While currentAngle > -3-90*i
+                        Gyro.getAngle(1, currentAngle)
+                    EndWhile
+                    Speaker.Note(100, "B3", 100)
+                    MotorD.StartPower(100)
+                    MotorD.Start()
+                    Program.Delay(115)
+                    MotorD.OffAndBrake()
+                    MotorBC.OffAndBrake()
+                    MotorBC.StartPower(-23)
+                    MotorBC.Start()
+                Else
+                    MotorBC.StartPower(-25)
+                    MotorBC.Start()
+                EndIf
+            EndIf
+        EndWhile
+    EndFor
+    turnToAngleleftlast(12)
+    Program.Delay(2500)
+    MotorBC.Off()
+    Program.Delay(50000)
+    Program.End()
+    Else
+        MotorBC.StartPower(-25)
+        MotorBC.Start()
+    EndIf
+    Program.Delay(50)
+EndWhile
+ 
+'LCD.Clear()
+'x_red = 0
+'y_red = 0
+'w_red = 0
+'h_red= 0
+'x_gr = 0
+'y_gr = 0
+'w_gr = 0
+'h_gr= 0
+'while 69 = 69
+  'Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+  'Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+  'LCD.Write(10, 20, x_red)
+  'LCD.Write(10, 80, y_red)
+  'While 1=1  
+    'Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+  'Pixy2.getSignature(4, 2, x_gr, y_gr, w_gr, h_gr)
+  'LCD.Write(10, 20, x_red)
+  'LCD.Write(10, 80, y_red)
+  'If x_red > 0  Then
+    'if(y_red<100) Then
+    'while x_red <> 0
+      'MotorD.StartPower(50)
+      'MotorD.Start()
+      'Program.Delay(10)
+      'MotorBC.StartPower(-30)
+      'MotorBC.Start()
+      'Program.Delay(10)
+      'Pixy2.getSignature(4, 1, x_red, y_red, w_red, h_red)
+    'EndWhile
+    'MotorBC.Off()
+    'MotorD.Off()
+    'MotorD.StartPower(-100)
+    'MotorD.Start()
+    'Program.Delay(80)
+    'MotorD.Off()
+    'MotorBC.StartPower(-30)
+      'MotorBC.Start()
+    'Else
+      'MotorBC.StartPower(-25)
+      'MotorBC.Start()
+      'EndIf
+ 
+    'EndIf
+    'MotorBC.StartPower(-25)
+    'MotorBC.Start()
+    'EndWhile 
+ 
+  'Program.Delay(500)
+  ''x_red = 0
+  ''y_red = 0
+  ''x_gr = 0
+  ''x_gr = 0
+'EndWhile
