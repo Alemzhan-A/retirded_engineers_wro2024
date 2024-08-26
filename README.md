@@ -64,6 +64,8 @@ Our estimated path looks like this (for the orange color):
 
 ![Robot Path](schemes/path.png)
 
+![Robot Path_details](schemes/path_details.png)
+
 
 **Strategy for Obstacle Round**
 
