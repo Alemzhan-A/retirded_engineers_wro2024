@@ -43,17 +43,19 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 **Sensor Suite:**
 
 1. **LEGO Color Sensor**
+   
    ![Lego Color Sesor](instructions/lego_color_sensor.jpg)
    - Purpose: Detection of orange and blue field markings
    - Location: front
 
-2. **Pixy2 Camera**
+3. **Pixy2 Camera**
    - Purpose: Identification of red and green objects
    - Location: top-front
    - How-to-connect: cut the wire from the ev3 cable and solder it as shown in the photo:
    ![Pixy connection](instructions/pixy.png)
 
-3. **LEGO Gyro Sensor**
+4. **LEGO Gyro Sensor**
+   
    ![Lego Gyro Sesor](instructions/lego_gyro_sensor.jpeg)
    - Purpose: Precise rotational control and orientation tracking
    - Location: back-top
