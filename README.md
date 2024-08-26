@@ -199,8 +199,8 @@ Team photos are in the `t-photos` folder.
 <details>
 <summary>Click to view team photo</summary>
 
-![Team Photo](t-photos/official_photo.jpg)
-*Caption: [Your Team Name] at [Event/Location]*
+![Team Photo](t-photos/official_photo.jpeg)
+*Caption: WE ARE BUILDING OUR ROBOT*
 
 </details>
 
