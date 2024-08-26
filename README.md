@@ -71,17 +71,97 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 
 ## Software
 
-[Software architecture overview]
-
 ```python
-# Example code snippet
-def detect_field_markings():
-    # Code for detecting field markings
-    pass
+// OFDL Modules Test Program
 
-def identify_objects():
-    # Code for identifying objects
-    pass
+// Define project folder
+Set project folder to "prjs\OFDL_ExPrj"
+
+// Import required modules
+Import Color, Gyro, Ultrasonic, and Pixy2 modules
+
+// Initialize display and show battery voltage
+Clear LCD
+Display battery voltage on LCD
+
+// Set sensor ports
+ColorSensorPort = 3
+GyroSensorPort = 1
+UltrasonicPort = 2
+
+// Reset gyro sensor
+Reset Gyro sensor on port 1
+initialAngle = 0
+
+// Define turning functions
+Function turnToAngleRight(numberofturns):
+    // Turn robot right by specified number of 90-degree turns
+    // Uses gyro sensor for precise turning
+    // Adjusts motor power for smooth turning and stopping
+
+Function turnToAngleRightLast(numberofturns):
+    // Similar to turnToAngleRight, but with slight adjustments for the last turn
+
+Function turnToAngleLeft(numberofturns):
+    // Turn robot left by specified number of 90-degree turns
+    // Uses gyro sensor for precise turning
+    // Adjusts motor power for smooth turning and stopping
+
+Function turnToAngleLeftLast(numberofturns):
+    // Similar to turnToAngleLeft, but with slight adjustments for the last turn
+
+Function turnToAngleRightFirst(numberofturns):
+    // Similar to turnToAngleRight, but with adjustments for the first turn
+
+Function turnToAngleLeftFirst(numberofturns):
+    // Similar to turnToAngleLeft, but with adjustments for the first turn
+
+Function color():
+    // Detect color using the color sensor
+    // Returns:
+    // 6 if green is detected
+    // 5 if red is detected
+    // 1 otherwise (assuming blue or other colors)
+
+// Main program loop
+While true:
+    Detect color
+    
+    If color is red (5):
+        // Perform right turns
+        For i from 1 to 12:
+            If i is 1:
+                Use turnToAngleRightFirst
+            ElseIf i is 12:
+                Use turnToAngleRightLast
+            Else:
+                Use turnToAngleRight
+            
+            Wait for white color (possibly a line)
+            Make small adjustments to maintain correct angle
+        
+        Stop motors and end program
+    
+    ElseIf color is blue (1):
+        // Perform left turns
+        For i from 1 to 12:
+            If i is 1:
+                Use turnToAngleLeftFirst
+            ElseIf i is 12:
+                Use turnToAngleLeftLast
+            Else:
+                Use turnToAngleLeft
+            
+            Wait for white color (possibly a line)
+            Make small adjustments to maintain correct angle
+        
+        Stop motors and end program
+    
+    Else:
+        // If no red or blue detected, move forward slowly
+        Set motor power to -25 (move forward)
+    
+    Wait for 50 milliseconds
 ```
 
 ## Photos and Video
