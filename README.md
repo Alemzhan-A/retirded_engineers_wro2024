@@ -1,4 +1,4 @@
-# WRO Future Engineers - Team Retored Engineers
+# WRO Future Engineers - Team Retired Engineers
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -58,6 +58,10 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 **Strategy for Qualification Round**
 
 Our strategy for the qualification round is based on detecting orange and blue colors. The robot's behavior is determined by which color it sees first. If the robot detects blue color initially, it begins one scenario where it turns left every time the color sensors do not detect white. In the alternative scenario, triggered by detecting orange first, the robot turns right whenever it does not see white. We utilize the gyro sensor to ensure correct rotation to exactly 90 degrees for each turn. Additionally, we employ the gyro sensor for path correction. If the robot's orientation exceeds 93 degrees, it rotates slightly to the left, and if the orientation is less than 87 degrees, it rotates to the right. This approach allows for precise navigation and course correction throughout the qualification round.
+
+So, we decided to prepare for the worst scenario, when we have all 4 walls elongated:
+Our estimated path looks like this (for the orange color):
+
 
 **Strategy for Obstacle Round**
 
