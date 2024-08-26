@@ -34,6 +34,8 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 
 **Dimensions**: 268mm (length) x 166mm (width) x 204mm (height)
 
+**Mass**: ~850g
+
 ### Power and Sensing Management
 
 - **Power Source**: LEGO EV3 Intelligent Brick with rechargeable lithium-ion battery
