@@ -118,7 +118,7 @@ Robot photos are in the `v-photos` folder.
 
 ### Video Demonstration
 
-[![Robot Demo Video](https://youtu.be/v8r7JQF2mQA?si=ztm9AK12ajWzkM_R)
+[![Robot Demo Video](https://youtu.be/v8r7JQF2mQA?si=ztm9AK12ajWzkM_R)]
 
 ## Team Information
 
