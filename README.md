@@ -57,6 +57,12 @@ Strategy for Qualification Round
 
 Our strategy for the qualification round is based on detecting orange and blue colors. The robot's behavior is determined by which color it sees first. If the robot detects blue color initially, it begins one scenario where it turns left every time the color sensors do not detect white. In the alternative scenario, triggered by detecting orange first, the robot turns right whenever it does not see white. We utilize the gyro sensor to ensure correct rotation to exactly 90 degrees for each turn. Additionally, we employ the gyro sensor for path correction. If the robot's orientation exceeds 93 degrees, it rotates slightly to the left, and if the orientation is less than 87 degrees, it rotates to the right. This approach allows for precise navigation and course correction throughout the qualification round.
 
+Strategy for Obstacle Round
+
+Our strategy for the obstacle round builds upon the approach used in the qualification round, but incorporates the use of a Pixy v2 camera for enhanced obstacle detection. The core navigation principles remain the same, with the robot responding to color cues and using the gyro sensor for precise turns and path corrections. However, the addition of the Pixy v2 camera allows for more sophisticated obstacle avoidance.
+When the Pixy v2 camera detects either red or green color, indicating an obstacle, the robot initiates an avoidance maneuver. It begins to turn until the detected color is no longer in view. Once the obstacle is cleared from its field of vision, the robot then rotates to align itself parallel to the original direction of the path. This ensures that the robot maintains its overall course while successfully navigating around obstacles.
+The gyro sensor continues to play a crucial role in this round, enabling the robot to execute precise turns both for regular navigation and obstacle avoidance. The color sensors are still utilized for detecting the main path, allowing the robot to stay on course when not dealing with obstacles. This combined use of the Pixy v2 camera, gyro sensor, and color sensors allows for a robust and adaptive approach to the obstacle round, enabling the robot to navigate complex environments while maintaining its intended trajectory.
+
 ## Technical Specifications
 
 - **Processor**: LEGO EV3 Intelligent Brick
