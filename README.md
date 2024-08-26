@@ -230,6 +230,7 @@ Robot photos are in the `v-photos` folder.
 
 ## Engineering Factor
 
+Our robotic system utilizes the LEGO Mindstorms EV3 Intelligent Brick as the primary processing unit and control module. This programmable brick serves as the central hub for sensor integration and motor control. We have incorporated standard LEGO sensors to provide various data inputs for environmental perception and navigation. To enhance the system's visual processing capabilities, we have integrated a Pixy2 smart vision sensor. This camera module, developed by Charmed Labs in collaboration with Carnegie Mellon University, offers real-time object detection and tracking. To facilitate the integration of the Pixy2 camera with the EV3 system, we performed hardware modifications involving soldering techniques. This adaptation was necessary to ensure compatibility between the Pixy2's communication protocols and the EV3 Brick's input/output interfaces. The combination of the EV3 Brick's computational power, LEGO's robust sensor array, and the advanced machine vision capabilities of the Pixy2 camera creates a versatile platform for robotics research and development. This setup enables a wide range of applications, from basic line-following tasks to more complex object recognition and autonomous navigation challenges.
 
 
 
