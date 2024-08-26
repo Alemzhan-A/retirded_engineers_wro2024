@@ -15,7 +15,7 @@
 
 ## Introduction
 
-Welcome to our WRO Future Engineers project repository! This README provides comprehensive information about our robot design, features, and development process for the [Year] World Robot Olympiad Future Engineers category.
+Welcome to our WRO Future Engineers project repository! This README provides comprehensive information about our robot design, features, and development process for the 2024 World Robot Olympiad Future Engineers category.
 
 ## Robot Design
 
