@@ -108,10 +108,10 @@ Robot photos are in the `v-photos` folder.
 ![Robot Front View](v-photos/robot_front.jpeg)
 *Front view of our robot*
 
-![Robot Side View](v-photos/robot_side.jpg)
+![Robot Side View](v-photos/robot_robot.jpeg)
 *Side view showcasing the drive system*
 
-![Robot Top View](v-photos/robot_top.jpg)
+![Robot Top View](v-photos/robot_top.jpeg)
 *Top view highlighting sensor placement*
 
 </details>
