@@ -36,6 +36,8 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 
 **Mass**: ~850g
 
+**Instruction for construction**: you can build this robot by using this document: [instruction](instructions/instruction_for_robot.pdf)
+
 ### Power and Sensing Management
 
 - **Power Source**: LEGO EV3 Intelligent Brick with rechargeable lithium-ion battery
