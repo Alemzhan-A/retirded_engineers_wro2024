@@ -183,7 +183,7 @@ While true:
 
 **You can also check our full source code here**
 
-[Source code](code/Qualification.bp)
+[Source code](codes/Qualification.bp)
 
 ## Photos and Video
 
