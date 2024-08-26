@@ -44,15 +44,15 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 
 1. **LEGO Color Sensor**
    - Purpose: Detection of orange and blue field markings
-   - Location: [Specify location]
+   - Location: front
 
 2. **Pixy2 Camera**
    - Purpose: Identification of red and green objects
-   - Location: [Specify location]
+   - Location: top-front
 
 3. **LEGO Gyro Sensor**
    - Purpose: Precise rotational control and orientation tracking
-   - Location: [Specify location]
+   - Location: back-top
 
 ### Obstacle Management
 
