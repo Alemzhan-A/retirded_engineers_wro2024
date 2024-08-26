@@ -199,7 +199,7 @@ Team photos are in the `t-photos` folder.
 <details>
 <summary>Click to view team photo</summary>
 
-![Team Photo](t-photos/team_photo.jpg)
+![Team Photo](t-photos/official_photo.jpg)
 *Caption: [Your Team Name] at [Event/Location]*
 
 </details>
@@ -232,3 +232,6 @@ Robot photos are in the `v-photos` folder.
 - **Members**:
   - Akhmetzhanov Alemzhan
   - Serikgali Daulet
+- **Fun Photo**:
+  
+  ![Fun Photo](t-photos/fun_photo.jpeg)
