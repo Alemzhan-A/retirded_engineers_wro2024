@@ -43,6 +43,7 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 **Sensor Suite:**
 
 1. **LEGO Color Sensor**
+   ![Lego Color Sesor](instructions/lego_color_sensor.jpg)
    - Purpose: Detection of orange and blue field markings
    - Location: front
 
@@ -53,6 +54,7 @@ Welcome to our WRO Future Engineers project repository! This README provides com
    ![Pixy connection](instructions/pixy.png)
 
 3. **LEGO Gyro Sensor**
+   ![Lego Gyro Sesor](instructions/lego_gyro_sensor.jpeg)
    - Purpose: Precise rotational control and orientation tracking
    - Location: back-top
 
