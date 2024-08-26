@@ -67,7 +67,7 @@ Welcome to our WRO Future Engineers project repository! This README provides com
   - 1x Pixy2 Camera
   - 1x LEGO Gyro Sensor
 - **Power Source**: Rechargeable lithium-ion battery (EV3 brick)
-- **Programming Language**: [Your language]
+- **Programming Language**: Basic(Clev3r)
 
 ## Software
 
