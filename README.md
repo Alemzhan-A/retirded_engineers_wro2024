@@ -33,6 +33,9 @@ Welcome to our WRO Future Engineers project repository! This README provides com
 - Motors with similar manufacturing origins for synchronized operation
 - EV3 brick mounted sideways for convenient battery replacement
 
+**Explanation:**
+We chose LEGO because assembling and installing its parts is convenient and simple. Two medium LEGO motors were installed vertically to accelerate the rear wheels, which have a radius of 31mm. To connect the two medium motors, two large gears (one for each motor) were installed, with a small gear between them to provide high speed to the rear wheels by rotating the large gears in the same direction. These motors were chosen based on their similarity in marking, indicating that they were made in the same factory and at the same time, allowing them to work more synchronously. Another larger gear was attached to the aforementioned small gear, which connects to the differential. We installed the differential specifically for the rear wheels, as our robot is rear-wheel drive. 
+
 **Dimensions**: 268mm (length) x 166mm (width) x 204mm (height)
 
 **Mass**: ~850g
