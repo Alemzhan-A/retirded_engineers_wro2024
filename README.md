@@ -50,6 +50,7 @@ Welcome to our WRO Future Engineers project repository! This README provides com
    ![Lego Color Sesor](instructions/lego_color_sensor.jpg)
    - Purpose: Detection of orange and blue field markings
    - Location: front
+   - ![scheme](schemes/datchik-cveta-shema.jpg)
 
 3. **Pixy2 Camera**
    - Purpose: Identification of red and green objects
