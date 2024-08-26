@@ -98,6 +98,8 @@ The gyro sensor continues to play a crucial role in this round, enabling the rob
 
 ## Software
 
+**Pseudocode for Qualification Round**:
+
 ```python
 // OFDL Modules Test Program
 
@@ -194,6 +196,135 @@ While true:
 **You can also check our full source code here**
 
 [Source code](codes/Qualification.bp)
+
+**Pseudocode for Obstacle Round**:
+```
+# Initialize sensors and variables
+Initialize ColorSensor on port 3
+Initialize GyroSensor on port 1
+Initialize UltrasonicSensor on port 2
+Initialize Pixy2Camera on port 4
+
+# Define functions
+Function turnToAngleRight(numberofturns)
+    # Turn robot right by specified number of 90-degree turns
+    # Uses gyro sensor for precise turning
+
+Function turnToAngleRightLast(numberofturns)
+    # Similar to turnToAngleRight, but with slight adjustments for final turn
+
+Function turnToAngleLeft(numberofturns)
+    # Turn robot left by specified number of 90-degree turns
+    # Uses gyro sensor for precise turning
+
+Function turnToAngleLeftLast(numberofturns)
+    # Similar to turnToAngleLeft, but with slight adjustments for final turn
+
+Function turnToAngleRightFirst(numberofturns)
+    # First right turn, slightly different from subsequent turns
+
+Function turnToAngleLeftFirst(numberofturns)
+    # First left turn, slightly different from subsequent turns
+
+Function detectColor()
+    # Use color sensor to detect surface color
+    # Return color code (5 for red, 6 for green, 1 for blue)
+
+# Main program loop
+While True
+    # Check for red object with Pixy2 camera
+    getPixy2Signature(RED)
+    
+    If red object detected Then
+        If red object is close (y < 100) Then
+            # Align with red object
+            While red object visible
+                adjustMotorsToAlign()
+            EndWhile
+            
+            # Turn to face red object
+            turnToFaceRedObject()
+        Else
+            # Move forward slowly
+            moveForwardSlowly()
+        EndIf
+    EndIf
+    
+    # Detect surface color
+    detectedColor = detectColor()
+    
+    If detectedColor is RED Then
+        # Execute right turn sequence
+        For i = 1 to 12
+            If i == 1 Then
+                turnToAngleRightFirst(i)
+            ElseIf i == 12 Then
+                turnToAngleRightLast(i)
+            Else
+                turnToAngleRight(i)
+            EndIf
+            
+            playSound("B7", 100ms)
+            
+            # Wait for white line
+            While not on white line
+                # Check for red object
+                If red object detected and close Then
+                    alignAndTurnToRedObject()
+                Else
+                    moveForwardSlowly()
+                EndIf
+            EndWhile
+        EndFor
+        
+        # Final delay and stop
+        wait(2500ms)
+        stopMotors()
+        endProgram()
+        
+    ElseIf detectedColor is BLUE Then
+        # Execute left turn sequence
+        For i = 1 to 12
+            If i == 1 Then
+                turnToAngleLeftFirst(i)
+            ElseIf i == 12 Then
+                turnToAngleLeftLast(i)
+            Else
+                turnToAngleLeft(i)
+            EndIf
+            
+            playSound("B7", 100ms)
+            
+            # Wait for white line
+            While not on white line
+                # Check for red object
+                If red object detected and close Then
+                    alignAndTurnToRedObject()
+                Else
+                    moveForwardSlowly()
+                EndIf
+            EndWhile
+        EndFor
+        
+        # Final delay and stop
+        wait(2500ms)
+        stopMotors()
+        endProgram()
+        
+    Else
+        # If no red or blue detected, move forward slowly
+        moveForwardSlowly()
+    EndIf
+    
+    # Short delay before next iteration
+    wait(50ms)
+EndWhile
+```
+
+**You can also check our full source code here**
+
+[Source code](codes/Qualification.bp)
+
 
 ## Photos and Video
 
