@@ -10,8 +10,6 @@
 4. [Software](#software)
 5. [Photos and Video](#photos-and-video)
 6. [Team Information](#team-information)
-7. [Development Process](#development-process)
-8. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
