@@ -62,7 +62,7 @@ Our strategy for the qualification round is based on detecting orange and blue c
 So, we decided to prepare for the worst scenario, when we have all 4 walls elongated:
 Our estimated path looks like this (for the orange color):
 
-[Robot Path](schemes/path.png)
+![Robot Path](schemes/path.png)
 
 
 **Strategy for Obstacle Round**
