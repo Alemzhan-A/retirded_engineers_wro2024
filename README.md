@@ -9,7 +9,8 @@
 3. [Technical Specifications](#technical-specifications)
 4. [Software](#software)
 5. [Photos and Video](#photos-and-video)
-6. [Team Information](#team-information)
+6. [Engineering Factor](#engineering-factor)
+7. [Team Information](#team-information)
 
 ## Introduction
 
@@ -226,6 +227,11 @@ Robot photos are in the `v-photos` folder.
 ### Video Demonstration
 
 [[Robot Demo Video](https://youtu.be/v8r7JQF2mQA?si=ztm9AK12ajWzkM_R)]
+
+## Engineering Factor
+
+
+
 
 ## Team Information
 
